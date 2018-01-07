@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskExceptionHandlingDemo", "TaskExceptionHandlingDemo\TaskExceptionHandlingDemo.csproj", "{1B5E208A-021C-42D7-8E53-D6E3EFB0F049}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B5E208A-021C-42D7-8E53-D6E3EFB0F049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5E208A-021C-42D7-8E53-D6E3EFB0F049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5E208A-021C-42D7-8E53-D6E3EFB0F049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5E208A-021C-42D7-8E53-D6E3EFB0F049}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {264652E0-B2E3-4638-AAC8-30A53C4DE1F8}
+	EndGlobalSection
+EndGlobal
