@@ -8,7 +8,7 @@ namespace TaskExceptionHandlingDemo
     {
         private static void CurrentDomain_UnhandledException( object sender, UnhandledExceptionEventArgs e )
         {
-            Console.WriteLine( e );
+            Console.WriteLine( $"Unhandled exception occurs {e.ExceptionObject}." );
         }
 
         private static Task DoWork( )
@@ -32,9 +32,21 @@ namespace TaskExceptionHandlingDemo
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
             var t = DoWork( );
+            //var t2 = DoWork( );
+            //var array = new[ ] { t, t2 };
+
+            //try
+            //{
+            //    await Task.WhenAll( array );
+            //}
+            //catch ( Exception e )
+            //{
+            //    Console.WriteLine( $"Main exception occurs {e}." );
+            //    //throw;
+            //}
             //t.Wait( );
             //var result = DoWork2( );
-            //result = null;
+            t = null;
             Thread.Sleep( 1000 );
             GC.Collect( );
             GC.WaitForPendingFinalizers( );
@@ -45,7 +57,7 @@ namespace TaskExceptionHandlingDemo
         private static void TaskScheduler_UnobservedTaskException( object sender, UnobservedTaskExceptionEventArgs e )
         {
             e.SetObserved( );
-            Console.WriteLine( e );
+            Console.WriteLine( $"Task unobservedTaskExeption occurs {e.Exception}." );
         }
     }
 }
